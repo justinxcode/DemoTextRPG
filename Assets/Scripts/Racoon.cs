@@ -10,11 +10,12 @@ namespace TextRpg
     void Start()
     {
       Energy = 10;
-      Attack = 5;
+      MaxEnergy = 10;
+      Attack = 8;
       Defence = 3;
       Gold = 20;
+      Description = "Raccoon";
       Inventory.Add("Bandit Mask");
     }
-
   }
 }

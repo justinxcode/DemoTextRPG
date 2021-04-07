@@ -6,21 +6,27 @@ namespace TextRpg
 {
   public class Enemy : Character
   {
-    private void Start()
-    {
-      Energy = 20;
-      Attack = 5;
-    }
+    public string Description { get; set; }
 
     public override void TakeDamage(int amount)
     {
-      base.TakeDamage(amount);
-      Debug.Log("This also happens, but only on enemy! not other characters");
+
+      Energy -= amount;
+
+      if (Energy <= 0)
+      {
+        Die();
+      }
+      else
+      {
+        UIController.OnEnemyUpdate(this);
+      }
+
     }
     public override void Die()
     {
-      base.Die();
-      Debug.Log("Character died, was enemy.");
+      Encounter.OnEnemyDie();
+      Energy = MaxEnergy;
     }
   }
 }

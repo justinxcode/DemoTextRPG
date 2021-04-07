@@ -18,6 +18,11 @@ namespace TextRpg
         Enemies.Add(enemy);
       }
     }
+
+    public Enemy GetRandomEnemy()
+    {
+      return Enemies[Random.Range(0,Enemies.Count)];
+    }
   }
 }
 

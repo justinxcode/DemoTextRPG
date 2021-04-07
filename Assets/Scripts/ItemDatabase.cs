@@ -13,6 +13,7 @@ namespace TextRpg
     private void Awake()
     {
 
+      // singleton
       if(Instance != null && Instance != this)
       {
         Destroy(this.gameObject);

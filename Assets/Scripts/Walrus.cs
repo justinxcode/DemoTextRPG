@@ -10,10 +10,12 @@ namespace TextRpg
     void Start()
     {
       Energy = 15;
-      Attack = 3;
+      MaxEnergy = 15;
+      Attack = 6;
       Defence = 5;
       Gold = 30;
-      Inventory.Add("Tooth");
+      Description = "Walrus";
+      Inventory.Add("Fatty Flab");
     }
   }
 }
